@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Internet Audience Worldwide</title>
+  <link href="https://playground.anychart.com/gallery/src/Tree_Map_Charts/Internet_Audience_Worldwide/iframe" rel="canonical">
+  <meta content="Tooltip,Treemap Chart" name="keywords">
+  <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
+  <style>html,
+body,
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}</style>
+ </head>
+ <body>
+  <div id="container"></div>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-treemap.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+  <script type="text/javascript">anychart.onDocumentReady(function() {
+  // create data
+  var data = [
+    {name: 'World', children: [
+      {name: 'Asia', children: [
+        {name: 'East', value: 1000},
+        {name: 'Southern', value: 803},
+        {name: 'Southeast', value: 415},
+        {name: 'Western', value: 182},
+        {name: 'Central', value: 36}
+      ]},
+      {name: 'America', children: [
+        {name: 'North', value: 346},
+        {name: 'South', value: 316},
+        {name: 'Central', value: 114},
+        {name: 'Caribbean', value: 23}
+      ]},
+      {name: 'Europe', children: [
+        {name: 'Eastern', value: 233},
+        {name: 'Western', value: 183},
+        {name: 'Southern', value: 135},
+        {name: 'Northern', value: 100}
+      ]},
+      {name: 'Africa', children: [
+        {name: 'Western', value: 158},
+        {name: 'Eastern', value: 140},
+        {name: 'Northern', value: 121},
+        {name: 'Southern', value: 34},
+        {name: 'Middle', value: 20}
+      ]},
+      {name: 'Oceania', children: [
+        {name: 'Oceania', value: 29}
+      ]}
+    ]}
+  ];
+
+  // create a data tree
+  var treeData = anychart.data.tree(data, 'as-tree');
+
+  // create a treemap chart visualizing the data tree
+  var chart = anychart.treeMap(treeData);
+
+  // set the depth of hints
+  chart.hintDepth(1);
+  // set the opacity of hints
+  chart.hintOpacity(0.7);
+
+  // configure the visual settings of the chart
+  chart.hovered().fill('silver', 0.2);
+  chart.selected().fill('silver', 0.6);
+  chart.selected().hatchFill('backward-diagonal', 'silver', 2, 20);
+  chart.normal().stroke('silver');
+  chart.hovered().stroke('gray', 2);
+  chart.selected().stroke('gray', 2);
+
+  // create and configure a custom color scale
+  var customColorScale = anychart.scales.linearColor();
+  customColorScale.colors(['Yellow', 'MediumPurple']);
+  // apply the custom color scale to the treemap chart
+  chart.colorScale(customColorScale);
+  // add the color range
+  chart.colorRange().enabled(true);
+  chart.colorRange().length('100%');
+
+  // enable HTML in the chart title
+  chart.title().useHtml(true);
+  // configure the chart title
+  chart.title(
+    '<span style="font-size:18px; font-weight:bold">Internet Audience Worldwide</span><br><i><span style="font-size:14px; font-style:italic">In million users</i>'
+  );
+
+  // enable HTML in the chart tooltips
+  chart.tooltip().useHtml(true);
+  // configure the chart tooltips
+  chart.tooltip().format('Internet audience: {%value} million users<br><i>(As of January 2019.)</i>');
+
+  // enable HTML in the chart labels
+  chart.labels().useHtml(true);
+  // configure the chart labels
+  chart.labels().format('<span style="font-weight:bold">{%name}</span><br>{%value}');
+
+  // set the container id
+  chart.container('container');
+
+  // draw the chart
+  chart.draw();
+
+});</script>
+ </body>
+</html>
