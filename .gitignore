@@ -1,3 +1,11 @@
+# IDE
+.vscode
+
 internet-audience-worldwide-gallery-v8-src-tree-map-charts-internet-audience-worldwide.zip
+
 data/data.ods
 data/data.html
+
+static/fonts
+static/svgs
+!static/svgs/svg-text.svg
