@@ -9,7 +9,7 @@ OUTPUT_JSON_FILE_PATH = r"data.json"
 
 # 1. Load input .csv to pandas DataFrame
 df = pd.read_csv(INPUT_CSV_FILE_PATH, sep=";")
-# NOTE NaN values (like "#N/A" in data.ods) get an empty NaN node below
+# NOTE NaN values (like "#N/A" in data.ods) get an empty NaN node below -> TODO QSTN should this be like this?
 
 # 2. Build hierarchically nested python dict from DataFrame
 res = [{
