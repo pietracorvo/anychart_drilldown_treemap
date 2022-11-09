@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/7346563/loading-local-json-file
+
 function loadFile() {
   var input, file, fr;
 
