@@ -1,10 +1,15 @@
-anychart webpage: https://www.anychart.com/products/anychart/overview/
-anychart docs quickstart: https://docs.anychart.com/Quick_Start/Quick_Start
-anyhcart treemap: https://www.anychart.com/blog/2022/06/08/treemap-js/
-ac playgroud: https://playground.anychart.com/
-ac api: https://api.anychart.com/
-ac blog: https://www.anychart.com/blog/
+# Treemap Visualisation with hierarchical data 
 
+Mainly built on top of [AnyChart](https://www.anychart.com/products/anychart/overview/).
+
+[Live version](https://pietracorvo.github.io/anychart_drilldown_treemap/) of master powered by GitHub Pages.
+
+Further Sources:
+- anychart docs quickstart: https://docs.anychart.com/Quick_Start/Quick_Start
+- anychart treemap: https://www.anychart.com/blog/2022/06/08/treemap-js/
+- anychart playgroud: https://playground.anychart.com/
+- anychart api: https://api.anychart.com/
+- anychart blog: https://www.anychart.com/blog/
 
 
 TODO diese links sind nice; it would be nice to incorpoirate the links at least in the leafstips, to lead to a paramterizabel detail view for every singleton element.
